@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState ,useEffect} from 'react'
 import avatar from '/avatar.jpg'
 import Context from '../context/CreateContext'
 import defaultAvatar from '/avatar.jpg'
