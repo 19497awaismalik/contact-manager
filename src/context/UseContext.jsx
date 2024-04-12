@@ -10,12 +10,12 @@ email:""
 });
 let [contact, setcontact] = useState([])
 
-useEffect(()=>{
-fetch('https://json-server-ruby.vercel.app/contants')
-.then((resp)=>resp.json())
-.then((data)=>setcontact(data))
+// useEffect(()=>{
+// fetch('https://json-server-ruby.vercel.app/contants')
+// .then((resp)=>resp.json())
+// .then((data)=>setcontact(data))
 
-},[setcontact])
+// },[setcontact])
 
 const handle=async(data)=>{
   if(data.name==="" || data.email===""){
