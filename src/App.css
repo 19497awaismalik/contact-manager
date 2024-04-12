@@ -1,0 +1,18 @@
+body{
+    padding: 0;
+    margin: 0;
+     font-family: 'Josefin Sans', sans-serif;;
+}
+p{
+    /* margin-top: 5px; */
+    margin-bottom: 0rem;
+}
+.p{
+    margin-left: 100px; 
+}
+
+#email{
+    padding-top: -50px;
+    margin-top: -10px;
+    padding-left: 50px;
+}
