@@ -37,8 +37,9 @@ const handle=async(data)=>{
         email:""
       })
       toast.success("Contact added successfull!");
-      let resp=await response.json();
-      setcontact(contact.concat(resp))
+     fetch('https://json-server-ruby.vercel.app/contants')
+.then((resp)=>resp.json())
+.then((data)=>setcontact(data))
       
       
     }
