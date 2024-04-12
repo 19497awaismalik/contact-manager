@@ -11,7 +11,7 @@ email:""
 let [contact, setcontact] = useState([])
 
 useEffect(()=>{
-fetch('http://localhost:3006/contants')
+fetch('https://json-server-ruby.vercel.app/contants')
 .then((resp)=>resp.json())
 .then((data)=>setcontact(data))
 
@@ -23,7 +23,7 @@ const handle=async(data)=>{
     return ;
   }else{
 
-    const response = await fetch('http://localhost:3006/contants', {
+    const response = await fetch('https://json-server-ruby.vercel.app/contants', {
       method: "POST", 
       
         headers: {
@@ -47,7 +47,7 @@ const handle=async(data)=>{
 
       
       
-      await fetch(`http://localhost:3006/contants/${id}`, {
+      await fetch(`https://json-server-ruby.vercel.app/contants/${id}`, {
         method: "DELETE", 
         
         headers: {
@@ -70,7 +70,7 @@ const handle=async(data)=>{
            return ;
       } else {
         
-      await fetch(`http://localhost:3006/contants/${id}`, {
+      await fetch(`https://json-server-ruby.vercel.app/contants/${id}`, {
           method: "PUT", 
           
         headers: {
@@ -82,7 +82,7 @@ const handle=async(data)=>{
       
       
       toast.success("Contact updated successfull!");
-      fetch('http://localhost:3006/contants')
+      fetch('https://json-server-ruby.vercel.app/contants')
       .then((resp)=>resp.json())
       .then((data)=>{
         setcontact(data)
