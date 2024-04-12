@@ -101,8 +101,8 @@ const imageHandler=(e)=>{
           <img src={props.item.avatar?props.item.avatar:avatar} alt="" className='    rounded-full  w-[50px] h-[50px]' />
         </div>
         <div className='name-email   '>
-          <p>{props.item.name}</p>
-          <p>{props.item.email}</p>
+          <p className="text-[16px] md:text-lg">{props.item.name}</p>
+          <p className="text-[16px] md:text-lg">{props.item.email}</p>
         </div>
         <div className=' w-[100px] mx-auto'>
         <div className={`   flex justify-end  ${open && "hidden"}`}>
