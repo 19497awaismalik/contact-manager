@@ -8,7 +8,13 @@ const ContactList = (props) => {
   
   const [open, setOpen] = useState(false);
   let {contact,Edit} = useContext(Context);
-
+     const [viewPort, setViewPort] = useState(false);
+ useEffect(()=>{
+       if (window.screen.availWidth<400) {
+        setViewPort(true);
+       }
+     },[window.screen])
+  
 const [update,setUpdate]=useState({
   id:"",
   avatar:"",
@@ -103,12 +109,12 @@ const imageHandler=(e)=>{
         <lord-icon
     src="https://cdn.lordicon.com/skkahier.json"
     trigger="hover"
-    style={{width:"30px",height:"30px",cursor:"pointer",marginRight:"2px"}} onClick={()=>props.handleDelete(props.item.id)} >
+    style={{width:viewPort?"25px":"30px",height:viewPort?"25px":"30px",cursor:"pointer",marginRight:"2px"}} onClick={()=>props.handleDelete(props.item.id)} >
 </lord-icon>
         <lord-icon
     src="https://cdn.lordicon.com/oqaajvyl.json"
     trigger="hover"
-    style={{width:"30px",height:"30px",cursor:"pointer",marginLeft:"2px",color:"red"}}
+    style={{width:viewPort?"25px":"30px",height:viewPort?"25px":"30px",cursor:"pointer",marginLeft:"2px",color:"red"}}
     onClick={()=>handleEdit(props.item.id)}>
 </lord-icon>
         </div>
