@@ -15,7 +15,7 @@ fetch('https://json-server-ruby.vercel.app/contants')
 .then((resp)=>resp.json())
 .then((data)=>setcontact(data))
 
-},[])
+},[setcontact])
 
 const handle=async(data)=>{
   if(data.name==="" || data.email===""){
