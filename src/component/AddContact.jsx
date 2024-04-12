@@ -37,14 +37,14 @@ const handleSubmit=(e)=>{
         </div>
         
         
-        <button className="text-white bg-green-500 border-0 py-2 px-10 focus:outline-none hover:bg-green-600 rounded text-lg" type="submit" >Add Contact</button>
+        <button className="text-white bg-green-500 border-0 py-2 px-5 md:px-10 focus:outline-none hover:bg-green-600 rounded text-lg" type="submit" >Add Contact</button>
       
        </form>
       </div>
     </div>
   </section>
   <div className=" card pb-[50px]">
-  <h1 className= "text-2xl  text-center mb-5 font-bold  md:mt-0 mt-10 ">Contact List</h1>
+  <h1 className= "text-2xl  text-center mb-5 font-bold  md:mt-0 mt-10 ">{contact.length===0?"No Contact Here":"Contact List"}</h1>
   {contact && contact.map((item,index)=>{ 
     return (<ContactList key={index} item={item} handleDelete={handleDelete}/>)
   })}
