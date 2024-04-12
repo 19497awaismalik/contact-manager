@@ -77,7 +77,7 @@ const imageHandler=(e)=>{
  
                 <input type="file" name='avatar' className='hidden' accept='image/png,image/jpeg,image/jpg,image/webp' id='avatar'  onChange={imageHandler}/>
  
-                <label htmlFor="avatar" className=' w-[30px] bg-slate-900 h-[30px] rounded-full absolute  items-center md:right-[160px] right-[120px] top-[60px]  cursor-pointer text-white '>
+                <label htmlFor="avatar" className=' w-[30px] bg-slate-900 h-[30px] rounded-full absolute  items-center md:right-[160px] right-[100px] top-[60px]  cursor-pointer text-white '>
                     <AiOutlineCamera size={23} className=' z-1 !items-center !flex  !justify-center ' />
                 </label>
                 </div>
